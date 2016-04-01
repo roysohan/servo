@@ -201,7 +201,7 @@ impl HTMLScriptElement {
             return NextParserState::Continue;
         }
         else {
-        element.has_attribute(@atom!("type")) && element.get_attribute().is_empty()
+        if element.has_attribute(@atom!("type")) && self.Text().is_empty()
 
         // Step 7.
         if was_parser_inserted {
